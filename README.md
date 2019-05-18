@@ -1,6 +1,6 @@
 ## Face orientation classifier
 
-To test the **faceOrientapp** ,  visit faceorientapp.appspot.com.
+To test the **faceOrientapp** ,  visit [faceorientapp.appspot.com](faceorientapp.appspot.com).
 
 ## Solution
 This problem can be solved in many ways, I chose to solve it by building a CNN classifier. 
