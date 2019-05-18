@@ -1,7 +1,3 @@
-# google-app-engine
-  
-**
-
 ## Face orientation classifier
 
 To test the **faceOrientapp** ,  visit faceorientapp.appspot.com.
