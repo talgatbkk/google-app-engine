@@ -9,7 +9,7 @@ from fastai import *
 from fastai.vision import *
 
 model_file_url = 'https://drive.google.com/uc?export=download&id=1V2lv-jAWTYD1g7TApmLbaACCNKrOB8Ti'
-model_file_name = 'training1.pth'
+model_file_name = 'training1'
 classes = ['correct', 'rotated90','rotated180','rotated270']
 path = Path(__file__).parent
 
