@@ -47,7 +47,15 @@ async def analyze(request):
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    return JSONResponse({'result': learn.predict(img)[0]})
+    if 'correct' == str(learn.predict(img)[0]):
+        return JSONResponse({'result': 'Image is correctly oriented'})
+    if 'rotated90' == str(learn.predict(img)[0]):
+        return JSONResponse({'result': 'This image is rotated by 90 degrees'})
+    if 'rotated180' == str(learn.predict(img)[0]):
+        return JSONResponse({'result': 'This image is rotated by 180 degrees'})
+    if 'rotated270' == str(learn.predict(img)[0]):
+        return JSONResponse({'result': 'This image is rotated by 270 degrees'})
+    return JSONResponse({'result': str(learn.predict(img)[0])})
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app, host='0.0.0.0', port=8080)
